@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			function randomimgtag(){
+				var imgname = randomimgname();
+				var imgtag = "<img src='"+imgname+".png'>";
+				return imgtag
+			}
+			function randomimgname(){
+				var imgnumber = Math.floor(Math.random() * 5);
+				var ninjaorcatbin = Math.round(Math.random());
+				var ninja = "ninja";
+				var cat = "cat";
+				var ninjaorcat = undefined;
+				if(ninjaorcatbin === 1){
+					ninjaorcat = ninja;
+				}
+				else{
+					ninjaorcat = cat;
+				}
+				var imgname = ninjaorcat + imgnumber;
+				return imgname
+			}
+			for(var x = 0; x < 5; x++){
+				$('body').append(randomimgtag());
+				$('img').css('display','block');
+			}
+			$('img').click(function(){
+
+				$(this).attr('src', randomimgname() + ".png" );
+			})
+        })
+	</script>
+</head>
+<body>
+</body>
+</html>
