@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#forslide').hide()
+            $('#forfade').hide()
+            $('#click').click(function(){
+                alert('you clicked the button');
+            })
+
+            $('#hide').click(function(){
+                $('#hide').hide();
+            })
+            $('#show').click(function(){
+                $('#hide').show();
+            })
+            $('#toggle').click(function(){
+                $('#fortoggle').toggle();
+            })
+            $('#slidedown').click(function(){
+                $('#forslide').slideDown(1000);
+            })
+            $('#slideup').click(function(){
+                $('#forslide').slideUp(1000);
+            })
+            $('#slideToggle').click(function(){
+                $('#forslide').slideToggle(1000);
+            })
+            $('#fadein').click(function(){
+                $('#forfade').fadeIn("slow");
+            })
+            $('#addclass').click(function(){
+                $('#foraddclass').addClass("bigheader");
+            })
+            $('#before').click(function(){
+                $('#before').before("<h1> New Header</h1>");
+            })
+            $('#after').click(function(){
+                $('#after').after("<h1> New Header</h1>");
+            })
+            $('#append').click(function(){
+                $('#forappend').append("<p>another paragraph</p>");
+            })
+            $('#html').click(function(){
+                var output = $('#html').html();
+                $('#html').after(output);
+            })
+            $('#attr').click(function(){
+                $('#forattr').attr("font-size", "60px");
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="click">Click</button>
+    <div>
+        <h1>Click</h1>
+        <p>.click function</p>
+    </div>
+    <hr>
+    <button id="hide">Hide</button>
+    <div>
+        <h1>Hide</h1>
+        <p>.hide function</p>
+    </div>
+    <hr>
+    <button id="show">Show</button>
+    <div>
+        <h1>Show</h1>
+        <p>.show function</p>
+        
+    </div>
+    <hr>
+    <button id="toggle">Toggle</button>
+    <div>
+        <h1 id="fortoggle">Toggle</h1>
+        <p>.toggle function</p>
+    </div>
+    <hr>
+    <button id="slidedown">Slidedown</button>
+    <div>
+        <h1>SlideDown</h1>
+        <p>.slidedown function</p>
+        <img id="forslide" src="black_bg.jpg">
+    </div>
+    <hr>
+    <button id="slideup">SlideUP</button>
+    <div>
+        <h1>Slide up</h1>
+        <p>.slideup function</p>
+    </div>
+    <hr>
+    <button id="slideToggle">Slide Toggle</button>
+    <div>
+        <h1>Slide Toggle</h1>
+        <p>.slidetoggle function</p>
+    </div>
+    <hr>
+    <button id="fadein">fadein</button>
+    <div>
+        <h1>fadein</h1>
+        <p>.fadein function</p>
+        <img id="forfade" src="black_bg.jpg">
+    </div>
+    <hr>
+    <button id="addclass">addClass</button>
+    <div>
+        <h1 id="foraddclass">addClass</h1>
+        <p>.addclass function</p>
+    </div>
+    <hr>
+    <button id="before">before</button>
+    <div>
+        <h1>before</h1>
+        <p>.before function</p>
+    </div>
+    <hr>
+    <button id="after">after</button>
+    <div>
+        <h1>after</h1>
+        <p>.after function</p>
+    </div>
+    <hr>
+    <button id="append">Append</button>
+    <div id="forappend">
+        <h1>append</h1>
+        <p>.append function</p>
+    </div>
+    <hr>
+    <button id="html">html</button>
+    <div>
+        <h1>html</h1>
+        <p>.html function</p>
+    </div>
+    <hr>
+    <button id="attr">Attr</button>
+    <div>
+        <h1 id="forattr">Attr</h1>
+        <p>.atrr function</p>
+    </div>
+    <hr>
+    <button>Val</button>
+    <div>
+        <h1>Val</h1>
+        <p>.val function</p>
+    </div>
+    <hr>
+    <button>Text</button>
+    <div>
+        <h1>text</h1>
+        <p>.text function</p>
+    </div>
+    <hr>
+</body>
+</html>
